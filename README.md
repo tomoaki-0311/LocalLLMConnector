@@ -29,6 +29,7 @@ print(text)
 ```
 
 ### 使い方（画像解釈）
+`image_paths` は複数指定可能です。
 ```python
 from localllmconnector import LocalLLMClient
 
@@ -36,7 +37,7 @@ client = LocalLLMClient()
 text = client.generate_with_images(
     model="qwen2.5vl:7b",
     prompt="Describe this image.",
-    image_paths=["/path/to/image.png"],
+    image_paths=["/path/to/image1.png", "/path/to/image2.png"],
 )
 print(text)
 ```
@@ -70,6 +71,7 @@ client.generate({ model: "llama3.1:8b", prompt: "Hello from Node" })
 ```
 
 ### 使い方（画像解釈）
+`imagePaths` は複数指定可能です。
 ```javascript
 const { LocalLLMClient } = require("./src");
 
@@ -77,7 +79,7 @@ const client = new LocalLLMClient();
 client.generateWithImages({
   model: "qwen2.5vl:7b",
   prompt: "Describe this image.",
-  imagePaths: ["/path/to/image.png"],
+  imagePaths: ["/path/to/image1.png", "/path/to/image2.png"],
 })
   .then(console.log)
   .catch(console.error);
