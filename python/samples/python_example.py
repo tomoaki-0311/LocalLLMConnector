@@ -3,7 +3,7 @@ from localllmconnector import LocalLLMClient
 
 def main() -> None:
     client = LocalLLMClient()
-    response = client.generate(model="llama3.1", prompt="Say hello from Python in one sentence.")
+    response = client.generate(model="llama3.1:8b", prompt="Say hello from Python in one sentence.")
     print(response)
 
 
