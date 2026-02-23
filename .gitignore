@@ -1,0 +1,11 @@
+# Python
+python/.venv/
+python/__pycache__/
+python/*.egg-info/
+python/.pytest_cache/
+
+# Node
+node/node_modules/
+
+# Misc
+.DS_Store

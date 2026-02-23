@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "localllmconnector"
+version = "0.1.0"
+description = "Simple Python client for local Ollama LLM"
+readme = "../README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "LocalLLMConnector" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/" 

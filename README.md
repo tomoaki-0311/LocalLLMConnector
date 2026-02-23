@@ -1,0 +1,63 @@
+# LocalLLMConnector
+
+Python と Node.js からローカル LLM（Ollama）にリクエストし、結果を取得するための軽量ライブラリです。
+
+## 事前条件
+- Ollama がローカルで起動していること（既定: http://localhost:11434）
+- 利用するモデルが pull 済みであること
+
+例:
+- `ollama pull llama3.1`
+
+## Python ライブラリ
+### セットアップ
+```bash
+cd /Users/tomo/Documents/LocalLLMConnector/python
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+### 使い方
+```python
+from localllmconnector import LocalLLMClient
+
+client = LocalLLMClient()
+text = client.generate(model="llama3.1", prompt="Hello from Python")
+print(text)
+```
+
+サンプル:
+```bash
+python samples/python_example.py
+```
+
+## Node.js ライブラリ
+### セットアップ
+```bash
+cd /Users/tomo/Documents/LocalLLMConnector/node
+npm install
+```
+
+### 使い方
+```javascript
+const { LocalLLMClient } = require("./src");
+
+const client = new LocalLLMClient();
+client.generate({ model: "llama3.1", prompt: "Hello from Node" })
+  .then(console.log)
+  .catch(console.error);
+```
+
+サンプル:
+```bash
+node samples/node_example.js
+```
+
+## 仕様
+- 既定の Ollama API: `http://localhost:11434`
+- `generate` と `chat` を提供
+- デフォルトは `stream: false`
+
+## ライセンス
+MIT

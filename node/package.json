@@ -1,0 +1,13 @@
+{
+  "name": "localllmconnector",
+  "version": "0.1.0",
+  "description": "Simple Node.js client for local Ollama LLM",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node samples/node_example.js"
+  },
+  "keywords": ["ollama", "llm", "local"],
+  "author": "LocalLLMConnector",
+  "license": "MIT"
+}
